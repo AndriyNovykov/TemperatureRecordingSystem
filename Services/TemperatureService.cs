@@ -1,4 +1,4 @@
-using TemperatureRecordingSystem.Records;
+using TemperatureRecordingSystem.Models;
 using TemperatureRecordingSystem.Dtos;
 using TemperatureRecordingSystem.Repositories;
 

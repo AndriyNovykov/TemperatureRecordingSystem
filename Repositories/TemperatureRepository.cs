@@ -1,5 +1,5 @@
 using TemperatureRecordingSystem.Dtos;
-using TemperatureRecordingSystem.Records;
+using TemperatureRecordingSystem.Models;
 
 namespace TemperatureRecordingSystem.Repositories;
 
