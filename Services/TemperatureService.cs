@@ -17,7 +17,7 @@ public class TemperatureService : ITemperatureService{
 
         if (record is null) 
         {
-            record = new TemperatureRecord{
+            record = new DailyTemperatureRecord{
                 SensorId = dto.SensorId,
                 HighestTemperatureInCelsius = dto.TemperatureInCelsius,
                 LowestTemperatureInCelsius = dto.TemperatureInCelsius,
@@ -29,7 +29,7 @@ public class TemperatureService : ITemperatureService{
         {
             var highestTemp = Math.Max(record.HighestTemperatureInCelsius, dto.TemperatureInCelsius);
             var lowestTemp = Math.Min(record.LowestTemperatureInCelsius, dto.TemperatureInCelsius);
-            record = new TemperatureRecord {
+            record = new DailyTemperatureRecord {
                 SensorId = record.SensorId,
                 HighestTemperatureInCelsius = highestTemp,
                 LowestTemperatureInCelsius = lowestTemp,
@@ -39,7 +39,7 @@ public class TemperatureService : ITemperatureService{
         }
     }
 
-    private bool TemperatureRecordNeedsToBeUpdated(TemperatureMeasurementDto dto, TemperatureRecord record) 
+    private bool TemperatureRecordNeedsToBeUpdated(TemperatureMeasurementDto dto, DailyTemperatureRecord record) 
     {
         return record.HighestTemperatureInCelsius < dto.TemperatureInCelsius ||
             record.LowestTemperatureInCelsius > dto.TemperatureInCelsius;

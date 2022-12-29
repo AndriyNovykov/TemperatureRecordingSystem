@@ -10,17 +10,17 @@ public class TemperatureRepository : ITemperatureRepository {
 
     }
 
-    public void Create(TemperatureRecord record)
+    public void Create(DailyTemperatureRecord record)
     {
         throw new NotImplementedException();
     }
 
-    public TemperatureRecord Get(int sensorId, DateTime date)
+    public DailyTemperatureRecord Get(int sensorId, DateTime date)
     {
         throw new NotImplementedException();
     }
 
-    public void Update(TemperatureRecord record)
+    public void Update(DailyTemperatureRecord record)
     {
         throw new NotImplementedException();
     }
